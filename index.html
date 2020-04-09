@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andrew Stokes - Eastern Travel</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <Link href="http://fonts.googleeapis.com/css?family=Quando" rel="style sheet">
+    
+    
+ <script>
+        function w3_open() {
+            document.getElementById("start").style.display = 'none';
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+
+        }
+
+        function w3_close() {
+            document.getElementById("start").style.display = 'block';
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+
+        }
+
+        function openRiver(evt, riverName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("river");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("rivertablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" main-purple", "");
+            }
+            document.getElementById(riverName).style.display = "block";
+            evt.currentTarget.className += " main-purple";
+        }
+
+        function openDestination(evt, destinationName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("destination");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("destinationtablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" main-purple", "");
+            }
+            document.getElementById(destinationName).style.display = "block";
+            evt.currentTarget.className += " main-purple";
+        }
+
+    </script>
+</head>
+<body>
+    
+        <!-- Header container -->
+        <!--******************-->
+        <body>
+
+            
+            <nav class="w3-sidebar w3-bar-block  w3-animate-left w3-center main-purple" style="display:none" id="mySidebar">
+                <h5 class="w3-xlarge">Menu</h5>
+                <button class="w3-bar-item w3-button w3-border-bottom w3-hover-black" onclick="w3_close()">Close </button>
+                <a href="#main" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Home</a>
+                <a href="#cruises" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Self taught</a>
+                <a href="#destinations" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Coding Boot Camp/Academic</a>
+                <button class="w3-bar-item w3-button w3-border-bottom main-hover-green" onclick="document.getElementById('signup_form').style.display='block'">Sign Up</button>
+            </nav>
+        
+            
+            <div id="main">
+                <p id="start" onclick="w3_open()" class="w3-xlarge w3-btn ">&#9776;</p>
+                <!-- &#9776; is the html code for the ≡ symbol  -->
+        <header class="w3-center  w3-container w3-padding">
+            <img src="https://via.placeholder.com/728x90.png" alt ="placeholder">
+        </header>
+        
+        <div id="main-offers" class="w3-container w3-cell-row w3-margin-top w3-margin-bottom w3-center">
+         <!-- Container for Cruises part of banner -->
+         <div class="w3-cell w3-mobile w3-border">
+            <h1>Self Taught</h1>
+           <img class="w3-center w3-image" src="https://via.placeholder.com/150" alt="place holder">
+            <!-- Actual copy -->
+            <div class="w3-margin cruises" >The process of becoming a<span class="title"> self taught developer</span> is extremly rewarding and with the right amount of decipline it can be the fastest way to getting ones foot into the tech world. If an individual chooses to take this path they must have a decent investing to the right learning methods are crucial.
+            </div>
+            <div class="w3-margin cruises" >Self teaching can dramatically reduse the cost of learning how to code</div>
+            <div class="w3-btn w3-round-large">
+                <a href="#cruises">
+                    <h4>Learn more...</h4>
+                </a>
+            </div>
+        </div>
+
+         <!-- Container for Destinations part of banner -->
+         <div class="w3-cell w3-mobile w3-border">
+            <h1>Coding Boootcamp</h1>
+            <img class="w3-center w3-image" src="https://via.placeholder.com/150" alt="place holder">
+            <!-- Actual copy -->
+            <div class="w3-margin cruises" > The traditional route of becoming a <span class="title"> Software Engineer</span> is to go through a college or some sort of accademic insitution. Most who persue the traditional path of becoming a developer obtain a computer science degree or the newer software engineering degree. Those looking for a faster, more affordable, that still uses in person intructors my opt for the coding bootcamp route.
+            </div>
+            <div class="w3-margin cruises" >More often than the traditional route is more expensive but you may have more career options</div>
+            <div class="w3-btn w3-round-large">
+                <a href="#resorts">
+                    <h4>Learn more...</h4>
+                </a>
+            </div>
+        </div>
+        </div>
+       
+        <div id="cruises" class="w3-container">
+            <h1 class="main-purple w3-padding w3-round-large">Self Taught</h1>
+            <!-- Navigation buttons for three cruises using tabbed panels -->
+            <div class="w3-bar w3-sand w3-card">
+                <button class="w3-bar-item w3-button main-purple rivertablink" onclick="openRiver(event,'mekong')">Team TreeHouse</button>
+                <button class="w3-bar-item w3-button rivertablink" onclick="openRiver(event,'yangtze')">Free Code Camp</button>
+                <button class="w3-bar-item w3-button rivertablink" onclick="openRiver(event,'yellow')">YouTube</button>
+            </div>
+              <!-- Cruise #1 -->
+              <div id="mekong" class="w3-container w3-border river w3-animate-left">
+                <h2 class="w3-margin-left">Team TreeHouse</h2>
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="https://via.placeholder.com/150" alt="place holder" class= "img">
+                    <p>Ut at placerat urna, et euismod est. Proin augue erat, mollis non libero euismod, laoreet imperdiet purus. Quisque cursus vulputate sem, consectetur pretium odio euismod et. Curabitur in dolor justo. Aliquam pharetra porta tincidunt. Duis nunc ex, imperdiet id placerat at, placerat id tortor. Phasellus blandit tempus nunc quis cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer lobortis porttitor condimentum</p>
+                </div>
+                </div>
+            <!-- Cruise #2 -->
+            <div id="yangtze" class="w3-container w3-border river w3-animate-left">
+                <h2 class="w3-margin-left">Free Code Camp</h2>
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="https://via.placeholder.com/150" alt="place holder" class= "img">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus nisl sit amet velit convallis bibendum. Proin porta tincidunt quam non placerat. Sed vel eros vel felis consectetur venenatis. Sed molestie elit id nisl hendrerit condimentum. Curabitur scelerisque urna urna, vitae ornare velit imperdiet ornare. Nam sodales, est et egestas aliquet, arcu velit blandit ligula, et mollis neque odio ac metus. Ut volutpat suscipit elit sit amet ornare. Aliquam nec eleifend nulla. Nunc sagittis leo ac orci pulvinar, non aliquam sem aliquam. Integer non vulputate sem. Curabitur laoreet leo libero, eget condimentum ligula pretium sed.</p>
+            </div>
+            </div>
+            <!-- Cruise #3 -->
+            <div id="yellow" class="w3-container w3-border river w3-animate-left">
+                <h2 class="w3-margin-left">YouTube</h2>
+
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="https://via.placeholder.com/150" alt="place holder" class= "img">
+                    <p>Praesent sit amet diam urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur quis metus eu tellus feugiat pulvinar ut sit amet purus. Duis mollis nibh id lectus scelerisque, et blandit lorem tempus. Morbi non venenatis arcu. Donec egestas a sem vel interdum. Maecenas nisi nisi, condimentum lobortis eleifend at, facilisis quis dui. Donec eu sollicitudin lectus, nec sodales augue. Cras rhoncus felis vitae libero vulputate, viverra tincidunt tortor gravida. Nullam luctus diam dolor, ut pretium purus sagittis vel. Maecenas iaculis dui velit, nec dapibus turpis vehicula non. Duis pellentesque tortor ipsum, vel mattis nisi eleifend sit amet. In quis turpis purus. Pellentesque ut purus rhoncus, sagittis quam vel, dignissim arcu.</p>
+            </div>
+            </div>
+        <div id="destination" class="w3-container">
+            <h1 class="main-purple w3-padding w3-round-large">Traditional & Coding Bootcamps</h1>
+            <!-- Navigation buttons for three cruises using tabbed panels -->
+            <div class="w3-bar w3-sand w3-card">
+                <button class="w3-bar-item w3-button destinationtablink" onclick="openDestination(event,'Hong Kong')">Traditional</button>
+                <button class="w3-bar-item w3-button destinationtablink" onclick="openDestination(event,'Archipelago')">Coding bootcamp</button>
+            </div>
+              <!-- destination #1 -->
+              <div id="Hong Kong" class="w3-container w3-border destination w3-animate-left">
+                <h2 class="w3-margin-left">Traditional</h2>
+                <div class="w3-container w3-mobile cruises" >
+
+                    <img src="https://via.placeholder.com/150" alt="place holder" class= "img">
+                    <p>Ut at placerat urna, et euismod est. Proin augue erat, mollis non libero euismod, laoreet imperdiet purus. Quisque cursus vulputate sem, consectetur pretium odio euismod et. Curabitur in dolor justo. Aliquam pharetra porta tincidunt. Duis nunc ex, imperdiet id placerat at, placerat id tortor. Phasellus blandit tempus nunc quis cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer lobortis porttitor condimentum</p>
+                </div>
+                </div>
+            <!-- destination #2 -->
+            <div id="Archipelago" class="w3-container w3-border destination w3-animate-left">
+                <h2 class="w3-margin-left">Coding Bootcamp</h2>
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="https://via.placeholder.com/150" alt="place holder" class= "img">
+                        
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus nisl sit amet velit convallis bibendum. Proin porta tincidunt quam non placerat. Sed vel eros vel felis consectetur venenatis. Sed molestie elit id nisl hendrerit condimentum. Curabitur scelerisque urna urna, vitae ornare velit imperdiet ornare. Nam sodales, est et egestas aliquet, arcu velit blandit ligula, et mollis neque odio ac metus. Ut volutpat suscipit elit sit amet ornare. Aliquam nec eleifend nulla. Nunc sagittis leo ac orci pulvinar, non aliquam sem aliquam. Integer non vulputate sem. Curabitur laoreet leo libero, eget condimentum ligula pretium sed.</p>
+            </div>
+            </div>
+</body>
+</html>
